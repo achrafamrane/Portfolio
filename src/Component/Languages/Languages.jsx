@@ -10,18 +10,18 @@ const Languages = ({ isDarkMode }) => {
       <div className="flex justify-center items-center text-3xl font-serif  text-red-500 mt-5 mb-3">
         {t("Languages")}
       </div>
-      <Box className="flex justify-center items-center space-x-32 ">
+      <Box className="flex justify-center items-center space-x-32">
         <div dir={i18n.dir()}>
           <Typography component="legend">{t("SecondeLanguage")}</Typography>
-          <Rating name="read-only" value="3" readOnly />
+          <Rating name="read-only" value={3} readOnly />
         </div>
         <div dir={i18n.dir()}>
           <Typography component="legend">{t("ThirdLanguage")}</Typography>
-          <Rating name="read-only" value="3" readOnly />
+          <Rating name="read-only" value={2} readOnly />
         </div>
         <div dir={i18n.dir()}>
           <Typography component="legend">{t("FirstLanguage")}</Typography>
-          <Rating name="read-only" value="3" readOnly />
+          <Rating name="read-only" value={3} readOnly />
         </div>
       </Box>
     </div>

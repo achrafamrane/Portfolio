@@ -1,9 +1,24 @@
 import image2 from "../../assets/photo_profil.jpg";
+/* import cv from "../../assets/achraf_amrane 2024.pdf"; */
 import Tooltip from "@mui/material/Tooltip";
 import { DataSkills } from "./Data";
 import { useTranslation } from "react-i18next";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 const Main = ({ isDarkMode }) => {
   const [t, i18n] = useTranslation();
+  /* const downloadPDF = () => {
+    // Replace 'your-pdf-file.pdf' with the path to your PDF file
+    const pdfPath = { cv };
+
+    // Create an anchor element
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.setAttribute("download", "achraf_amrane 2024.pdf"); // Set the download attribute
+    document.body.appendChild(link);
+    link.click(); // Trigger the click event
+    document.body.removeChild(link); // Clean up
+  }; */
 
   return (
     <>
@@ -37,8 +52,26 @@ const Main = ({ isDarkMode }) => {
           <h1 className="font-bold text-3xl shadow-2xl shadow-slate-600  rounded-full">
             {t("Nom")}
           </h1>
-          <h3 className="mt-4 font-semibold">{t("Major")}</h3>
-          <div>dsd</div>
+          <h3 className="mt-4 font-semibold text-red-500 text-lg">
+            {t("Major")}
+          </h3>
+          <div className="flex justify-center items-center mt-5 space-x-6">
+            <a
+              href="https://www.linkedin.com/in/achraf-amrane-241698176"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            {/*  <button
+              className="bg-red-900 hover:bg-red-700 text-white font-serif mr-5   rounded inline-flex items-center"
+              onClick={downloadPDF}
+            >
+              <svg className="fill-current w-4 h-4 m-1 " viewBox="0 0 20 20">
+                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+              </svg>
+            </button> */}
+          </div>
         </div>
       </div>
       <div
