@@ -1,10 +1,9 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Switch from "@mui/material/Switch";
-
+import { useTranslation } from "react-i18next";
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "title", href: "/", current: true },
   /*   { name: "Team", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Calendar", href: "#", current: false }, */
@@ -15,9 +14,10 @@ function classNames(...classes) {
 }
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const label = { inputProps: { "Switch demo": " aria-label" } };
+  const [t, i18n] = useTranslation();
 
   return (
-    <Disclosure as="nav" className="">
+    <Disclosure as="nav" dir={i18n.dir()}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -56,18 +56,43 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
-                        {item.name}
+                        {t(item.name)}
                       </a>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <Switch
-                  {...label}
-                  defaultChecked
+                <button
+                  className="flex items-center justify-center mt-4 py-2 px-4 rounded-md  text-white hover:bg-gray-100"
                   onClick={() => setIsDarkMode(!isDarkMode)}
-                />
+                >
+                  {isDarkMode ? (
+                    <>🌞 {/* Sun icon for light mode */}</>
+                  ) : (
+                    <>🌙 {/* Moon icon for dark mode */}</>
+                  )}
+                </button>
+                {i18n.language == "ar" && (
+                  <button
+                    className="flex items-center justify-center mt-4 py-2 px-4 rounded-md hover:bg-slate-200 hover:text-black"
+                    onClick={() => {
+                      i18n.changeLanguage("en");
+                    }}
+                  >
+                    en
+                  </button>
+                )}
+                {i18n.language == "en" && (
+                  <button
+                    className="flex items-center justify-center mt-4 py-2 px-4 rounded-md hover:bg-slate-200 hover:text-black"
+                    onClick={() => {
+                      i18n.changeLanguage("ar");
+                    }}
+                  >
+                    ar
+                  </button>
+                )}
 
                 {/*  <button
                   type="button"

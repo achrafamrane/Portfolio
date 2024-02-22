@@ -1,0 +1,21 @@
+{
+  "title": "الرئيسية",
+  "welcome": "مرحبا ،أنا",
+  "Nom": "عمران أشرف",
+  "Major": "مطور ويب ",
+  "FirstJob": "وزارة التعليم العالي",
+  "SecondeJob": "الصندوق الوطني للسجل التجاري",
+  "WorkExperience": "الخبرة والدراسة",
+  "FirstLanguage": "العربية",
+  "SecondeLanguage": "الانجليزية",
+  "ThirdLanguage": "الفرنسية",
+  "Skills": "المهارات",
+  "descriptionSkills": "أستطيع ان أقول بأني جيد في",
+  "Tools": "الأدوات",
+  "descriptionTools": "أفضل الأدوات بالنسبة لي",
+  "Languages": "اللغات",
+  "titleLicense": "ليسانس اعلام الي",
+  "descriptionLicense": "تصميم موقع لعرض السيارات",
+  "titleMaster": "ماستر اعلام الي",
+  "descriptionMaster": "تصميم موقع للنقل"
+}

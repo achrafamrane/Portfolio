@@ -1,10 +1,14 @@
-import image2 from "../../assets/image2.jpg";
+import image2 from "../../assets/photo_profil.jpg";
 import Tooltip from "@mui/material/Tooltip";
 import { DataSkills } from "./Data";
+import { useTranslation } from "react-i18next";
 const Main = ({ isDarkMode }) => {
+  const [t, i18n] = useTranslation();
+
   return (
     <>
       <div
+        dir={i18n.dir()}
         data-aos="zoom-in-up"
         data-aos-duration="2000"
         className={`flex justify-center items-center slide  pb-20 ${
@@ -19,21 +23,22 @@ const Main = ({ isDarkMode }) => {
           data-aos-anchor-placement="top-bottom"
         >
           <img
-            className="rounded-full w-[350px] h-[350px] object-center justify-center items-center"
+            className="rounded-full w-[350px] h-[350px] object-cover justify-center items-center"
             src={image2}
             alt=""
           />
         </div>
         <div
-          className="ml-10  rounded-full"
+          className="ml-10 mr-10 rounded-full"
           data-aos="zoom-in-up"
           data-aos-duration="2000"
         >
-          <p className="font-medium">Hello,I'm</p>
+          <p className="font-medium">{t("welcome")}</p>
           <h1 className="font-bold text-3xl shadow-2xl shadow-slate-600  rounded-full">
-            AMRANE ACHRAF
+            {t("Nom")}
           </h1>
-          <h3 className="mt-4 font-semibold">FULL STACK DEVELOPER</h3>
+          <h3 className="mt-4 font-semibold">{t("Major")}</h3>
+          <div>dsd</div>
         </div>
       </div>
       <div
@@ -44,10 +49,10 @@ const Main = ({ isDarkMode }) => {
         }`}
       >
         <div className="flex justify-center items-center text-3xl font-serif  text-red-500 mt-5 ">
-          Skills
+          {t("Skills")}
         </div>
         <div className="flex justify-center items-center text-sm font-serif  text-gray-500 ">
-          I can say i’m quite good at
+          {t("descriptionSkills")}
         </div>
         <div
           className={`flex justify-center items-center mt-7  w-full ml-0  rounded-full ${

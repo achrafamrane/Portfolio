@@ -1,0 +1,21 @@
+{
+  "title": "Home",
+  "welcome": "Hello,I'm",
+  "Nom": "AMRANE ACHRAF",
+  "Major": "FULL STACK DEVELOPER",
+  "FirstJob": "Ministry of Higher Education",
+  "SecondeJob": "National Center of Trade Register",
+  "FirstLanguage": "Arab",
+  "SecondeLanguage": "English",
+  "ThirdLanguage": "French",
+  "WorkExperience": "Work experience & Education",
+  "Skills": "Skills",
+  "descriptionSkills": "I can say i’m quite good at",
+  "Tools": "Tools",
+  "descriptionTools": "My favorites tools",
+  "Languages": "Languages",
+  "titleLicense": "Licence Informatique",
+  "descriptionLicense": "Main Project: Creating a web application for showroom",
+  "titleMaster": "Master Informatique",
+  "descriptionMaster": "Main Project: Design and development of a web application for logistics management in the transportation industry"
+}

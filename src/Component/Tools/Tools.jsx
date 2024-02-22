@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { DataTools } from "./DataTools";
 const Tools = ({ isDarkMode }) => {
+  const [t, i18n] = useTranslation();
+
   return (
     <div
       data-aos="zoom-in-up"
@@ -11,10 +14,10 @@ const Tools = ({ isDarkMode }) => {
       }`}
     >
       <div className="flex justify-center items-center text-3xl font-serif  text-red-500 ">
-        Tools
+        {t("Tools")}
       </div>
       <div className="flex justify-center items-center text-sm font-serif  text-gray-500 ">
-        My favorites tools
+        {t("descriptionTools")}
       </div>
 
       <div className=" rounded-md">
