@@ -67,7 +67,7 @@ const Experience = ({ isDarkMode }) => {
           <div dir={i18n.dir()}>
             {" "}
             <h3 className="font-serif text-2xl">{t("Major")}</h3>
-            <h4 className="font-serif">{t("FirstJob")}</h4>
+            <h4 className="font-serif text-blue-800">{t("FirstJob")}</h4>
             <p className="font-serif">
               Java | MySQL | Javascript | Angular | ReactJS | PrimeFaces |
               PrimeNg | JavaEE
@@ -86,7 +86,7 @@ const Experience = ({ isDarkMode }) => {
         >
           <div dir={i18n.dir()}>
             <h3 className="font-serif text-2xl">{t("Major")}</h3>
-            <h4 className="font-serif">{t("SecondeJob")}</h4>
+            <h4 className="font-serif text-blue-800 ">{t("SecondeJob")}</h4>
             <p className="font-serif">
               Java | MySQL | Javascript | Angular | ReactJS | PrimeFaces |
               PrimeNg | JavaEE | Oracle | Liferay 7 | Spring Boot | Spring
